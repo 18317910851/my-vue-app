@@ -3,11 +3,10 @@
     <div class="topTitle" :class="'level' + props.listInfo.level">{{ props.listInfo.titleName }}</div>
     <el-anchor :container="containerRef" direction="vertical"
                type="default"
-               :offset="30"
-
+               :offset="200"
                @click="handleClick">
       <div v-for="item in props.listInfo.menuList" :key="item.id">
-        <el-anchor-link :class="'level' + item.level" v-if="item.children"
+        <el-anchor-link  :class="'level' + item.level" v-if="item.children"
                         :href="item.hrefName" :title="item.titleName">
           <template #sub-link>
             <el-anchor-link :class="'level' + item1.level" :key="item1.id"

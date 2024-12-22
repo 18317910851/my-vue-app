@@ -40,6 +40,7 @@ const itemList = [
     id: 4,
     name: "工具",
     info: "让我们看看有哪些开发工具吧",
+    to: "/toolsPage"
   }, {
     id: 5,
     name: "功能模块",

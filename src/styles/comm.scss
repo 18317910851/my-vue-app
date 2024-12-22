@@ -1,0 +1,4 @@
+.auto-comm-height {
+  height: calc(100vh - var(--header-top-height));
+  overflow: hidden;
+}

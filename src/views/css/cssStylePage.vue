@@ -11,14 +11,15 @@
               <div class="main-title">盒子模型</div>
               <boxLineInfo infos="让我们一起看看这些好看的盒子样式"></boxLineInfo>
               <CssBox/>
-            </div>
+            </div>>
             <div id="C12">
               <div class="main-title">CSS基础使用</div>
               <boxLineInfo infos="来看看你是否忘记了这些属性"></boxLineInfo>
               <CssBase></CssBase>
             </div>
             <div id="part3" style="height: 500px;background: rgba(0, 0, 255, 0.02);margin-top: 30px;">
-              part3
+              <div class="main-title">好看的盒子</div>
+              <boxLineInfo infos="动态盒子样式"></boxLineInfo>
             </div>
           </div>
         </div>
@@ -29,7 +30,6 @@
 </template>
 
 <script setup lang="ts">
-
 import CssBox from "./components/CssBox.vue"
 import CssBase from "./components/CssBase.vue"
 
@@ -137,6 +137,18 @@ const leftList = ref(
     }
 )
 
+const jsCode = `
+      const greet = () => console.log("Hello, world!");
+    `;
+const htmlCode = `
+      <div class="example">Hello, World!</div>
+    `;
+const pythonCode = `
+      def greet():
+          print("Hello, world!")
+    `;
+
+
 onMounted(() => {
   distanceToTop.value = mTab.value.getBoundingClientRect().top;
   console.log("distanceToTop", distanceToTop.value);
@@ -161,7 +173,7 @@ onMounted(() => {
     height: 100%;
     overflow-y: auto;
 
-    .right-box::-webkit-scrollbar{
+    .right-box::-webkit-scrollbar {
       display: none;
     }
   }

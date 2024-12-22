@@ -31,8 +31,8 @@ const goHomePage = () => {
 
 <style scoped lang="scss">
 .first-top {
-  height: 55px;
-  line-height: 55px;
+  height: var(--header-top-height);
+  line-height: var(--header-top-height);
   display: flex;
   justify-content: space-between;
   background-color: #fff;

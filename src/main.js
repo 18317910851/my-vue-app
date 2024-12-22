@@ -1,7 +1,8 @@
 import {createApp} from 'vue'
 import App from './App.vue'
 import './style.css'
-
+import './styles/var.scss'
+import "./styles/comm.scss"
 // 引入自动更新提醒
 import "@/utils/auto-update.js"
 import ElementPlus from 'element-plus'

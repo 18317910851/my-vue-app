@@ -52,15 +52,6 @@ const routes: RouteRecordRaw[] = [
             showHeader: true,
         }
     },
-    {
-        path: '/downFile',
-        name: 'downFile',
-        component: () => import("@/views/excel/downFile.vue"),
-        meta: {
-            title: '下载excel',
-            showHeader: true,
-        }
-    },
     // ces页面
     {
         path: '/cesCode',

@@ -64,7 +64,6 @@ const goHomePage = () => {
         cursor: pointer;
         margin-right: 15px;
         font-size: 15px;
-        //line-height: 18px;
 
         &:hover {
           color: #409eff;

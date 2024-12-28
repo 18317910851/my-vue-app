@@ -116,7 +116,7 @@ const clickCopy = () => {
 onMounted(() => {
   options.value.extensions = props.backType === "dark" ? [oneDark] : []
   switch (props.codeType) {
-    case "javascript":
+    case "javascript" || "js":
       options.value.mode = "text/javascript";
       options.value.extensions.push(javascript())
       break;

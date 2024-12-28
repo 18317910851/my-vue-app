@@ -12,6 +12,7 @@
               <boxLineInfo infos="让我们一起看看这些好看的盒子样式"></boxLineInfo>
               <CssBox/>
             </div>>
+
             <div id="C12">
               <div class="main-title">CSS基础使用</div>
               <boxLineInfo infos="来看看你是否忘记了这些属性"></boxLineInfo>
@@ -122,6 +123,12 @@ const leftList = ref(
               level: 3,
               titleName: "2.多行省略",
               hrefName: "#C122",
+            },
+            {
+              id: "C123",
+              level: 3,
+              titleName: "3.伪元素的使用",
+              hrefName: "#C123",
             },
           ]
         },

@@ -53,47 +53,20 @@ border-radius: 8px;`"/>
       <p class="html-box">html代码</p>
       <code-box codeType="html" :code="textHtml"/>
       <p class="css-box">css代码</p>
-      <code-box codeType="css" code=".box8 {
-  width: 100%;
-  background: repeating-linear-gradient(135deg, transparent, transparent 3px, rgb(228, 161, 85) 3px, rgb(240, 118,
-  118) 8px);
-  animation: shine 1s infinite linear;
-  overflow: hidden;
-}
-
-.content {
-  width: calc(100% - 12px) !important;
-  height: calc(100% - 12px) !important;
-  box-sizing: border-box;
-  margin: 6px;
-  background-color: #010629;
-}"/>
+      <code-box codeType="css" :code="code8"/>
     </div>
     <h3 id="C119" class="titleName">9.图片边框</h3>
     <div class="card-box">
       <div class="top-info top-info9">
         ces11111S
       </div>
-      <code-box codeType="css" code="color: black;
-text-align: center;
-padding: 50px;
-line-height: 1;
-margin: 20px auto;
-width: 50% !important;
-border: 50px solid #fff;
-// 170 是切割量 round 会制动匹配大小
-border-image: url(../../../assets/comm/borderimg.jpg) 170 round;
-"/>
+      <code-box codeType="css" :code="code9" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-
-
-const textHtml = `<div class="top-info top-info8">
-    <div class="content"></div>
-</div>`
+import {code8, textHtml, code9} from "../../css/commData/cssBoxData"
 
 </script>
 

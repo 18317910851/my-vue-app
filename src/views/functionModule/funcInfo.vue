@@ -16,26 +16,30 @@
               <div class="main-title" id="C121">Excel模块</div>
               <boxLineInfo infos="excel的导入导出"></boxLineInfo>
               <ExcelUpload/>
-              <code-box  codeType="vue" :code="codeExcelUp"></code-box>
-              <code-box  codeType="js" :code="codeExcelJs"></code-box>
-              <div class="main-title" id="C122">Excel模块</div>
-              <boxLineInfo infos="excel的导入导出"></boxLineInfo>
             </div>
-            <div></div>
+            <div class="main-title" id="C122">Excel模块</div>
+            <boxLineInfo infos="excel的导出"></boxLineInfo>
+            <DownFile/>
           </div>
         </div>
       </el-main>
     </el-container>
+
   </div>
+
 </template>
 
 <script setup lang="ts">
+import {ref, onMounted, onUnmounted} from 'vue'
+
 import mapInfo from "./mapInfo/index.vue"
-import ExcelUpload from "@/views/excel/excelUpload.vue";
-import {codeExcelUp, codeExcelJs} from "@/views/excel/commCode/dataInfo"
-const containerRef = ref<HTMLElement | null>(null)
-const mTab = ref()
+import ExcelUpload from "./excel/excelUpload.vue"
+import DownFile from "@/views/functionModule/excel/downFile.vue";
+
+const mTab = ref<HTMLElement>(null)
 const distanceToTop = ref(0)
+const containerRef = ref<HTMLElement | null>(null)
+
 const leftList = ref({
   id: "C1",
   titleName: "基础功能合集",
@@ -77,10 +81,8 @@ const leftList = ref({
     }
   ]
 })
-
 onMounted(() => {
   distanceToTop.value = mTab.value.getBoundingClientRect().top;
-  console.log("distanceToTop", distanceToTop.value);
 })
 
 </script>

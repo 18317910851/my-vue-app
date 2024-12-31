@@ -17,15 +17,16 @@
         ></el-table-column>
       </el-table>
     </div>
-
+    <code-box  codeType="vue" :code="codeExcelUp"></code-box>
+    <code-box  codeType="js" :code="codeExcelJs"></code-box>
   </div>
 </template>
 
 <script lang="ts" setup>
 import {ref} from 'vue';  // 引入 Vue 3 的响应式 API
 import * as XLSX from 'xlsx';  // 引入 xlsx 库
-import {ElMessage} from 'element-plus';  // 引入 ElMessage 提示框
-
+import {ElMessage} from 'element-plus';
+import {codeExcelUp, codeExcelJs} from "./commCode/dataInfo"
 
 // 响应式数据
 const tableData = ref([])  // 存储表格数据

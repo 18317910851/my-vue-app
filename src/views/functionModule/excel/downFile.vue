@@ -1,13 +1,16 @@
 <template>
-  <div>1111</div>
+  <h5 style="margin: 10px 0;">方式一：前端下载处理</h5>
   <el-button type="primary" @click="getExportData">下载</el-button>
+  <code-box  codeType="vue" :code="codeExcelDown"></code-box>
+  <code-box  codeType="js" :code="codeExcelDownJs"></code-box>
 </template>
 
 <script setup lang="ts">
-import {onMounted, onBeforeUnmount, ref} from 'vue';
+import {onMounted} from 'vue';
 import * as XLSX from 'xlsx'
 import {saveAs} from 'file-saver';
 import _ from 'lodash'
+import {codeExcelDown, codeExcelDownJs} from './commCode/dataInfo'
 
 let column = [
   ['姓名', "name"],
